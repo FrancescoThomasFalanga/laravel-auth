@@ -26,7 +26,7 @@
 
             <div class="logo">
 
-                <a href="{{route('homepage')}}">
+                <a href="{{route('admin.')}}">
                     <img src="" alt="LOGO">
                 </a>
 
