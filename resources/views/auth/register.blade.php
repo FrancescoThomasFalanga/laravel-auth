@@ -2,10 +2,10 @@
 
 @section('content')
 <div class="mt-4">
-    <div class="fluid-container justify-content-center align-items-center">
+    <div class="fluid-container justify-content-center align-items-center centered">
         <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">{{ __('Register') }}</div>
+            <div class="card register-form fw-bold">
+                <div class="card-header fs-4">{{ __('Register') }}</div>
 
                 <div class="card-body">
                     <form method="POST" action="{{ route('register') }}">
@@ -63,8 +63,9 @@
 
                         <div class="mb-4 row mb-0">
                             <div class="col-md-6 offset-md-4">
-                                <button type="submit" class="btn btn-primary">
+                                <button type="submit" class="btn btn-primary btn-custom">
                                     {{ __('Register') }}
+                                    <span></span>
                                 </button>
                             </div>
                         </div>
