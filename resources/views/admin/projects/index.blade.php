@@ -2,34 +2,29 @@
 
 @section('content')
     
-    <table>
+    <section>
 
-        <thead>
+        @foreach ($projects as $project)            
 
-            <th>Titolo</th>
-            <th>Descrizione</th>
-            <th>Slug</th>
-            <th>Comandi</th>
+        <div class="project">
+            <div class="left">
 
-        </thead>
+                <a href="">
+                    <img src="{{$project->url_img}}" alt="Project IMG">
+                </a>
 
-        <tbody>
+            </div>
 
-            @foreach ($projects as $project)
-                
-            <tr>
-                <td>{{$project->title}}</td>
-                <td>{{$project->description}}</td>
-                <td>{{$project->url_img}}</td>
-                <td>{{$project->slug}}</td>
-                <td><a href="{{route('admin.projects.show', $project->slug)}}">Mostra</a></td>
-            </tr>
+            <div class="right">
 
+                <h2>{{$project->title}}</h2>
 
-            @endforeach
+                <p>{{$project->description}}</p>
 
-        </tbody>
+            </div>
+        </div>
 
-    </table>
+        @endforeach
+    </section>
 
 @endsection
