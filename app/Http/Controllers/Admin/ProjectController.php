@@ -5,6 +5,8 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use App\Models\Project;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Validator;
+use Illuminate\Support\Str;
 
 class ProjectController extends Controller
 {
@@ -27,7 +29,7 @@ class ProjectController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.projects.create');
     }
 
     /**
@@ -38,7 +40,22 @@ class ProjectController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $this->validation($request);
+
+        $form_data = $request->all();
+
+        $project = new Project();
+
+        
+        $project->fill($form_data);
+        
+        $project->slug = Str::slug($project->title, '-');
+        
+        $project->save();
+
+        return redirect()->route('admin.projects.show', $project->slug);
+
+
     }
 
     /**
@@ -60,7 +77,7 @@ class ProjectController extends Controller
      */
     public function edit(Project $project)
     {
-        //
+        return view('admin.projects.edit', compact('project'));
     }
 
     /**
@@ -72,7 +89,15 @@ class ProjectController extends Controller
      */
     public function update(Request $request, Project $project)
     {
-        //
+        $this->validation($request);
+
+        $form_data = $request->all();
+
+        $project->update($form_data);
+
+        $project->save();
+
+        return redirect()->route('admin.projects.show', $project->slug);
     }
 
     /**
@@ -83,6 +108,30 @@ class ProjectController extends Controller
      */
     public function destroy(Project $project)
     {
-        //
+        $project->delete();
+
+        return redirect()->route('admin.projects.index');
+    }
+
+
+    private function validation($request) {
+
+        $form_data = $request->all();
+
+        // VALIDATION ITAS
+        $validator = Validator::make($form_data, [
+            'title' => 'required|max:100',
+            'description' => 'required|max:300',
+            'url_img' => 'required',
+        ], [
+            'title.required' => 'Il campo è obbligatorio',
+            'title.max' => 'Puoi inserire al massimo 100 Caratteri',
+            'description.required' => 'Il campo è obbligatorio',
+            'description.max' => 'Puoi inserire al massimo 300 Caratteri',
+            'url_img.required' => 'Il campo è obbligatorio',
+        ])->validate();
+
+        return $validator;
+
     }
 }

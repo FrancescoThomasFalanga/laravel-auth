@@ -2,7 +2,16 @@
 
 @section('content')
     
+
+
+
     <section>
+    
+        <Button class="add-project">
+            <a href="{{route('admin.projects.create')}}">
+                Add a Project TO The List
+            </a>
+        </Button>
 
         @foreach ($projects as $project)            
 
@@ -20,6 +29,10 @@
                 <h2>{{$project->title}}</h2>
 
                 <p>{{$project->description}}</p>
+
+                <button>
+                    <a href="{{route('admin.projects.show', $project->slug)}}">View Project</a>
+                </button>
 
             </div>
         </div>

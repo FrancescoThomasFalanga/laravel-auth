@@ -48,7 +48,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="{{route('admin.projects.index')}}">
+                        <a class="{{request()->is('/admin/projects') ? 'active' : ''}}" href="{{route('admin.projects.index')}}">
                             Projects
                         </a>
                     </li>
@@ -79,7 +79,7 @@
                     @endif
                     @else
                     <li class="nav-item dropdown">
-                        <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                        <a id="navbarDropdown" class="dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                             {{ Auth::user()->name }}
                         </a>
 
