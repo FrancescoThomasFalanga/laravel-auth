@@ -5,7 +5,7 @@
 
     <div class="container">
 
-            <h1>
+            <h1 class="text-shadow">
                 Hey, I'm Francesco
             </h1>
 
