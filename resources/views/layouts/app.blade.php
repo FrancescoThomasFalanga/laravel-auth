@@ -48,7 +48,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="{{route('admin.projects.index')}}">
+                        <a class="{{request()->is('projects') ? 'active' : ''}}" href="{{route('projects.index')}}">
                             Projects
                         </a>
                     </li>
