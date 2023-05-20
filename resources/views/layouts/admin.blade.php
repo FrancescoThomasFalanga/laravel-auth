@@ -38,7 +38,7 @@
                 <ul>
 
                     <li>
-                        <a class="{{request()->is('/') ? 'active' : ''}}" href="{{route('admin.')}}">
+                        <a class="{{request()->is('admin') ? 'active' : ''}}" href="{{route('admin.')}}">
                             Home
                         </a>
                     </li>
@@ -48,7 +48,7 @@
                         </a>
                     </li>
                     <li>
-                        <a  href="{{route('admin.projects.index')}}">
+                        <a class="{{request()->is('admin/projects') ? 'active' : ''}}" href="{{route('admin.projects.index')}}">
                             Projects
                         </a>
                     </li>
@@ -85,7 +85,7 @@
 
                         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
                             <a class="dropdown-item" href="{{ url('admin') }}">{{__('Dashboard')}}</a>
-                            <a class="dropdown-item" href="{{ url('admin.projects.index') }}">{{__('Manage Projects')}}</a>
+                            <a class="dropdown-item" href="{{ route('admin.projects.index') }}">{{__('Manage Projects')}}</a>
                             <a class="dropdown-item" href="{{ url('profile') }}">{{__('Profile')}}</a>
                             <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
                                                     document.getElementById('logout-form').submit();">

@@ -11,7 +11,7 @@
             <p>A Full Stack Web Developer</p>
 
             <button>
-                <a href="">PROJECTS</a>
+                <a href="{{route('admin.projects.index')}}">PROJECTS</a>
             </button>
 
     </div>
