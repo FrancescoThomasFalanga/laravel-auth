@@ -1,4 +1,4 @@
-<section class="space-y-6">
+<section class="space-y-6 form-section">
     <header>
         <h2 class="text-lg font-medium text-gray-900">
             {{ __('Delete Account') }}
@@ -10,18 +10,19 @@
     </header>
 
     <!-- Modal trigger button -->
-    <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#delete-account">
+    <button type="button" class="btn btn-danger btn-custom" data-bs-toggle="modal" data-bs-target="#delete-account">
         {{__('Delete Account')}}
+        <span></span>
     </button>
 
     <!-- Modal Body -->
     <!-- if you want to close by clicking outside the modal, delete the last endpoint:data-bs-backdrop and data-bs-keyboard -->
     <div class="modal fade" id="delete-account" tabindex="-1" data-bs-backdrop="static" data-bs-keyboard="false" role="dialog" aria-labelledby="delete-account" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
-            <div class="modal-content">
+            <div class="modal-content card">
                 <div class="modal-header">
                     <h5 class="modal-title" id="delete-account">Delete Account</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    <button type="button" class="btn-close btn-custom" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
                     <h2 class="text-lg font-medium text-gray-900">
@@ -51,8 +52,9 @@
 
 
 
-                            <button type="submit" class="btn btn-danger">
+                            <button type="submit" class="btn btn-danger btn-custom">
                                 {{ __('Delete Account') }}
+                                <span></span>
                             </button>
                             <!--  -->
                         </div>

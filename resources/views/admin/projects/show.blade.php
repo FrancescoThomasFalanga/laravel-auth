@@ -38,15 +38,15 @@
                           <div class="modal-dialog">
                             <div class="modal-content">
                               <div class="modal-header">
-                                <h1 class="modal-title fs-5" id="exampleModalLabel">Delete Comic</h1>
+                                <h1 class="modal-title fs-4" id="exampleModalLabel">Delete Project</h1>
                                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                               </div>
                               <div class="modal-body">
-                                Are you sure you want to delete the actual Comic?
+                                Are you sure you want to delete the actual Project?
                               </div>
                               <div class="modal-footer">
-                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">CLOSE</button>
-                                <button type="submit" class="btn btn-secondary">DELETE</button>
+                                <button type="button" class="btn btn-secondary delete-btn" data-bs-dismiss="modal">CLOSE<span></span></button>
+                                <button type="submit" class="btn btn-secondary">DELETE<span></span></button>
                               </div>
                             </div>
                           </div>

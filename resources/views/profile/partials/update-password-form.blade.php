@@ -1,4 +1,4 @@
-<section>
+<section class="form-section">
     <header>
         <h2 class="text-lg font-medium text-gray-900">
             {{ __('Update Password') }}
@@ -45,7 +45,7 @@
         </div>
 
         <div class="d-flex align-items-center gap-4">
-            <button type="submit" class="btn btn-primary">{{ __('Save') }}</button>
+            <button type="submit" class="btn btn-primary btn-custom mt-3">{{ __('Save') }} <span></span></button>
 
             @if (session('status') === 'password-updated')
             <script>

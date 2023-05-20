@@ -1,10 +1,10 @@
-<section>
+<section class="form-section">
     <header>
-        <h2 class="text-secondary">
+        <h2 class="">
             {{ __('Profile Information') }}
         </h2>
 
-        <p class="mt-1 text-muted">
+        <p class="mt-1">
             {{ __("Update your account's profile information and email address.") }}
         </p>
     </header>
@@ -60,7 +60,7 @@
         </div>
 
         <div class="d-flex align-items-center gap-4">
-            <button class="btn btn-primary" type="submit">{{ __('Save') }}</button>
+            <button class="btn btn-primary btn-custom mt-3" type="submit">{{ __('Save') }} <span></span></button>
 
             @if (session('status') === 'profile-updated')
             <script>
