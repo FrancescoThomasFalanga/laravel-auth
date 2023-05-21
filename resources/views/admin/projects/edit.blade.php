@@ -18,7 +18,7 @@
     
     
             <label class="lb" for="title">Title:</label>
-            <input name="title" id="title" type="text" class="infos form-control @error('title') is-invalid @enderror" value="{{old('title') ?? $project->title}}">
+            <input name="title" id="title" type="text" class="infos input @error('title') is-invalid @enderror" value="{{old('title') ?? $project->title}}">
             @error('title')
             <div class="invalid-feedback mb-3 mt-0">
                 {{$message}}
@@ -26,7 +26,7 @@
             @enderror
         
             <label for="description" class="lb">Description:</label>
-            <textarea name="description" id=description" cols="30" rows="3" class="infos form-control @error('description') is-invalid @enderror">{{old('description') ?? $project->description}}</textarea>
+            <textarea name="description" id=description" cols="30" rows="3" class="infos input @error('description') is-invalid @enderror">{{old('description') ?? $project->description}}</textarea>
             @error('description')
             <div class="invalid-feedback mb-3 mt-0">
                 {{$message}}
@@ -34,7 +34,7 @@
             @enderror
         
             <label for="url_img" class="lb">URL Img:</label>
-            <input name="url_img" id="url_img" type="text" class="infos form-control @error('url_img') is-invalid @enderror" value="{{old('url_imd') ?? $project->url_img}}">
+            <input name="url_img" id="url_img" type="text" class="infos input @error('url_img') is-invalid @enderror" value="{{old('url_imd') ?? $project->url_img}}">
             @error('url_img')
             <div class="invalid-feedback mb-3 mt-0">
                 {{$message}}
