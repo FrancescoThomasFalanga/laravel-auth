@@ -60,7 +60,7 @@
         </div>
 
         <div class="d-flex align-items-center gap-4">
-            <button class="btn btn-primary btn-custom mt-3" type="submit">{{ __('Save') }} <span></span></button>
+            <button class="btn btn-custom mt-3" type="submit">{{ __('Save') }} <span></span></button>
 
             @if (session('status') === 'profile-updated')
             <script>

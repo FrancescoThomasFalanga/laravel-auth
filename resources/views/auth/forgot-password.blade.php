@@ -1,10 +1,10 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container mt-4">
-    <div class="row justify-content-center">
+<div class="mt-4">
+    <div class="fluid-container justify-content-center align-items-center centered">
         <div class="col-md-8">
-            <div class="card">
+            <div class="card login-form">
                 <div class="card-header">{{ __('Reset Password') }}</div>
 
                 <div class="card-body">
@@ -33,8 +33,9 @@
 
                         <div class="mb-4 row mb-0">
                             <div class="col-md-6 offset-md-4">
-                                <button type="submit" class="btn btn-primary">
+                                <button type="submit" class="btn btn-custom">
                                     {{ __('Send Password Reset Link') }}
+                                    <span></span>
                                 </button>
                             </div>
                         </div>

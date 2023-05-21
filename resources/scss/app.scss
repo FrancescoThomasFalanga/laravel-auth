@@ -1,5 +1,35 @@
 @import '~bootstrap/scss/bootstrap';
 
+// CUSTOM SCROLLBAR
+::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+::-webkit-scrollbar-button {
+  width: 0px;
+  height: 0px;
+}
+::-webkit-scrollbar-thumb {
+  background: #0fe855;
+  border: 0px none #ffffff;
+  border-radius: 50px;
+}
+::-webkit-scrollbar-thumb:active {
+  background: #29cd13; 
+}
+::-webkit-scrollbar-track {
+  background: #050810;
+  border: 0px none #ffffff;
+  border-radius: 50px;
+}
+::-webkit-scrollbar-corner {
+  background: transparent;
+}
+// /CUSTOM SCROLLBAR
+
+
+
+
 html {
     position: relative;
     min-height: 100%;
