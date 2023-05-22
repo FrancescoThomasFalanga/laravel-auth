@@ -5,11 +5,11 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
-class DashboardController extends Controller
+class HomePageController extends Controller
 {
-    public function index() {
+    public function home() {
 
-        return view('admin.dashboard');
-        
+        return view('admin.homepage');
+
     }
 }

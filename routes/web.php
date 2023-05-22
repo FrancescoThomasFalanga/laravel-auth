@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Admin\DashboardController;
+use App\Http\Controllers\Admin\HomePageController;
 use App\Http\Controllers\Admin\ProjectController;
 use App\Http\Controllers\Guest\ProjectController as GuestProjectController;
 use App\Http\Controllers\Home\PageController;
@@ -28,7 +29,9 @@ Route::middleware(['auth', 'verified'])->prefix('admin')->name('admin.')->group(
 
     Route::resource('projects', ProjectController::class)->parameters(['projects' => 'project:slug']);
     
-    Route::get('/', [DashboardController::class, 'home']);
+    Route::get('/', [HomePageController::class, 'home']);
+
+    Route::get('dashboard', [DashboardController::class, 'index'])->name('dashboard');
 
 });
 
