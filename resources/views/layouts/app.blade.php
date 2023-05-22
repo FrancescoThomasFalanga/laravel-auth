@@ -40,7 +40,7 @@
                     <ul>
     
                         <li>
-                            <a class="{{request()->is('/') ? 'active' : ''}}" href="{{route('homepage')}}">
+                            <a class="{{str_contains( Route::currentRouteName(), 'homepage') ? 'active' : ''}}" href="{{route('homepage')}}">
                                 Home
                             </a>
                         </li>
@@ -50,7 +50,7 @@
                             </a>
                         </li>
                         <li>
-                            <a class="{{request()->is('projects') ? 'active' : ''}}" href="{{route('projects.index')}}">
+                            <a class="{{str_contains( Route::currentRouteName(), 'projects') ? 'active' : ''}}" href="{{route('projects.index')}}">
                                 Projects
                             </a>
                         </li>

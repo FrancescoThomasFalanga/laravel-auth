@@ -28,7 +28,7 @@
 
                 <div class="logo">
     
-                    <a href="{{route('admin.')}}">
+                    <a href="{{route('admin.homepage')}}">
                         <img src="" alt="LOGO">
                     </a>
     
@@ -40,7 +40,7 @@
                     <ul>
     
                         <li>
-                            <a class="{{request()->is('admin') ? 'active' : ''}}" href="{{route('admin.')}}">
+                            <a class="{{str_contains( Route::currentRouteName(), 'admin.homepage') ? 'active' : ''}}" href="{{route('admin.homepage')}}">
                                 Home
                             </a>
                         </li>
@@ -50,7 +50,7 @@
                             </a>
                         </li>
                         <li>
-                            <a class="{{request()->is('admin/projects') ? 'active' : ''}}" href="{{route('admin.projects.index')}}">
+                            <a class="{{str_contains( Route::currentRouteName(), 'admin.projects') ? 'active' : ''}}" href="{{route('admin.projects.index')}}">
                                 Projects
                             </a>
                         </li>
