@@ -24,41 +24,45 @@
 
         <nav id="nav-custom">
 
-            <div class="logo">
+            <div class="left">
 
-                <a href="{{route('homepage')}}">
-                    <img src="" alt="LOGO">
-                </a>
+                <div class="logo">
 
-            </div>
-
-
-            <div class="links">
-
-                <ul>
-
-                    <li>
-                        <a class="{{request()->is('/') ? 'active' : ''}}" href="{{route('homepage')}}">
-                            Home
-                        </a>
-                    </li>
-                    <li>
-                        <a href="">
-                            About
-                        </a>
-                    </li>
-                    <li>
-                        <a class="{{request()->is('projects') ? 'active' : ''}}" href="{{route('projects.index')}}">
-                            Projects
-                        </a>
-                    </li>
-                    <li>
-                        <a href="">
-                            Contact
-                        </a>
-                    </li>
-
-                </ul>
+                    <a href="{{route('homepage')}}">
+                        <img src="" alt="LOGO">
+                    </a>
+    
+                </div>
+    
+    
+                <div class="links">
+    
+                    <ul>
+    
+                        <li>
+                            <a class="{{request()->is('/') ? 'active' : ''}}" href="{{route('homepage')}}">
+                                Home
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                About
+                            </a>
+                        </li>
+                        <li>
+                            <a class="{{request()->is('projects') ? 'active' : ''}}" href="{{route('projects.index')}}">
+                                Projects
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                Contact
+                            </a>
+                        </li>
+    
+                    </ul>
+    
+                </div>
 
             </div>
 

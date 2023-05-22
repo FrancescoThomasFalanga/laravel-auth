@@ -24,43 +24,48 @@
 
         <nav id="nav-custom">
 
-            <div class="logo">
+            <div class="left">
 
-                <a href="{{route('admin.')}}">
-                    <img src="" alt="LOGO">
-                </a>
-
+                <div class="logo">
+    
+                    <a href="{{route('admin.')}}">
+                        <img src="" alt="LOGO">
+                    </a>
+    
+                </div>
+    
+    
+                <div class="links">
+    
+                    <ul>
+    
+                        <li>
+                            <a class="{{request()->is('admin') ? 'active' : ''}}" href="{{route('admin.')}}">
+                                Home
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                About
+                            </a>
+                        </li>
+                        <li>
+                            <a class="{{request()->is('admin/projects') ? 'active' : ''}}" href="{{route('admin.projects.index')}}">
+                                Projects
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                Contact
+                            </a>
+                        </li>
+    
+                    </ul>
+    
+                </div>
+                
             </div>
 
-
-            <div class="links">
-
-                <ul>
-
-                    <li>
-                        <a class="{{request()->is('admin') ? 'active' : ''}}" href="{{route('admin.')}}">
-                            Home
-                        </a>
-                    </li>
-                    <li>
-                        <a href="">
-                            About
-                        </a>
-                    </li>
-                    <li>
-                        <a class="{{request()->is('admin/projects') ? 'active' : ''}}" href="{{route('admin.projects.index')}}">
-                            Projects
-                        </a>
-                    </li>
-                    <li>
-                        <a href="">
-                            Contact
-                        </a>
-                    </li>
-
-                </ul>
-
-            </div>
 
 
             <div class="auth">
