@@ -18,7 +18,6 @@ class ProjectController extends Controller
     public function index()
     {
         $projects = Project::all();
-
         
 
         return view('admin.projects.index', compact('projects'));
@@ -94,6 +93,8 @@ class ProjectController extends Controller
         $this->validation($request);
 
         $form_data = $request->all();
+
+        $project->slug = Str::slug($form_data['title'], '-');
 
         $project->update($form_data);
 
