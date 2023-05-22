@@ -21,7 +21,7 @@
 
                 <p>{{$project->description}}</p>
 
-                <button>
+                <button class="button">
                     <a href="{{route('projects.show', $project->slug)}}">View Project</a>
                 </button>
 

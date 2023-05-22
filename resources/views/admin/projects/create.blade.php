@@ -4,7 +4,7 @@
 
     <div class="go-back-btn text-center">
 
-        <button>
+        <button class="button">
             <a href="{{route('admin.projects.index')}}">Go Back</a>
         </button>
 

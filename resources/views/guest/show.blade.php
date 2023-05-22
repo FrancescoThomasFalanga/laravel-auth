@@ -21,7 +21,7 @@
 
                 <div class="d-flex gap-4">
     
-                    <button>
+                    <button class="button">
                         <a href="{{route('projects.index')}}">Go Back</a>
                     </button>
 

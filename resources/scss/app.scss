@@ -295,32 +295,6 @@ section {
     margin: 50px auto 130px;
     max-width: 1000px;
 
-    .add-project {
-
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: fit-content;
-
-        padding: 12px 8px;
-        background-color: #0fe855;
-
-        &:hover {
-            background-color: #0fe854a1;
-        }
-
-        a {
-
-            text-decoration: none;
-            text-transform: uppercase;
-            font-weight: bold;
-            color: black;
-            padding: 12px 8px;
-
-        }
-
-    }
-
 
     .project {
         display: flex;
@@ -358,28 +332,6 @@ section {
             p {
 
                 line-height: 30px;
-
-            }
-
-            button {
-
-                padding: 12px 8px;
-                background-color: #0fe855;
-                margin-bottom: 20px;
-
-                &:hover {
-                    background-color: #0fe854a1;
-                }
-
-                a {
-
-                    text-decoration: none;
-                    text-transform: uppercase;
-                    font-weight: bold;
-                    color: black;
-                    padding: 12px 8px;
-
-                }
 
             }
 
@@ -755,3 +707,68 @@ div.fluid-container main .container button, section .project .right .modal-foote
     transition: opacity .3s;
    }
    
+
+
+
+// CUSTOM BUTTON IN ADMIN PROJECTS SECTION
+.button {
+--color: #03f40f;
+padding: 14px;
+background-color: transparent;
+border-radius: .3em;
+position: relative;
+overflow: hidden;
+cursor: pointer;
+transition: .5s;
+border: 1px solid;
+font-family: inherit;
+text-transform: uppercase;
+color: var(--color);
+z-index: 1;
+
+    &::before, &::after {
+        content: '';
+        display: block;
+        width: 50px;
+        height: 50px;
+        transform: translate(-50%, -50%);
+        position: absolute;
+        border-radius: 50%;
+        z-index: -1;
+        background-color: var(--color);
+        transition: 1s ease;
+        }
+        
+    &::before {
+    top: -1em;
+    left: -1em;
+    }
+    
+    &::after {
+    left: calc(100% + 1em);
+    top: calc(100% + 1em);
+    }
+    
+    &:hover::before, &:hover::after {
+    height: 410px;
+    width: 410px;
+    }
+    
+    &:hover {
+    color: rgb(10, 25, 30);
+    }
+    
+    &:active {
+    filter: brightness(.9);
+    }
+
+    a {
+
+    text-decoration: none;
+    padding: 14px;
+    font-weight: bold;
+    font-size: 17px;
+
+    }
+
+}

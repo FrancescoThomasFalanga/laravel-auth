@@ -7,11 +7,11 @@
 
     <section>
     
-        <Button class="add-project">
+        <button class="button">
             <a href="{{route('admin.projects.create')}}">
                 Add a Project TO The List
             </a>
-        </Button>
+        </button>
 
         @foreach ($projects as $project)            
 
@@ -30,7 +30,7 @@
 
                 <p>{{$project->description}}</p>
 
-                <button>
+                <button class="button">
                     <a href="{{route('admin.projects.show', $project->slug)}}">View Project</a>
                 </button>
 

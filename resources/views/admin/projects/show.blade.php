@@ -21,7 +21,7 @@
 
                 <div class="d-flex gap-4">
 
-                    <button>
+                    <button class="button">
                         <a href="{{route('admin.projects.edit', $project->slug)}}">Edit</a>
                     </button>
     
@@ -30,7 +30,7 @@
                         @csrf
                         @method('DELETE')
             
-                        <button type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                        <button class="btn btn-danger text-primary fw-bold p-3" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">
                           DELETE
                         </button>
               
@@ -54,7 +54,7 @@
                       
                     </form>
     
-                    <button>
+                    <button class="button">
                         <a href="{{route('admin.projects.index')}}">Go Back</a>
                     </button>
 
