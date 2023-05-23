@@ -22,7 +22,7 @@
 <body>
     <div class="fluid-container">
 
-        <nav id="nav-custom">
+        <nav id="nav-custom" class="fixed-top mb-5">
 
             <div class="left">
 
