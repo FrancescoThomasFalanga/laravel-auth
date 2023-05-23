@@ -787,3 +787,36 @@ margin-bottom: 20px;
     }
 
 }
+
+
+
+
+
+
+
+
+
+// ADMIN DASHBOARD
+.dashboard-sidebar {
+    min-width: 200px;
+}
+
+
+#admin-layout {
+  display: flex;
+  
+  aside {
+    position: fixed;
+    display: flex;
+    flex-flow: column;
+    gap: 2em;
+
+    height: 100%;
+
+    padding: 16px;
+  }
+
+  main {
+    flex-grow: 1;
+  }
+}

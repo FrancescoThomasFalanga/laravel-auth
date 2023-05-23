@@ -6,12 +6,6 @@
 
 
     <section>
-    
-        <button class="button">
-            <a href="{{route('admin.projects.create')}}">
-                Add a Project TO The List
-            </a>
-        </button>
 
         @foreach ($projects as $project)            
 
